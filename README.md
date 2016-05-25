@@ -19,6 +19,8 @@ Should work on all browsers.
 All you need to do is wrap your content (React Components or jsx or html...) for the specific screen/device you are trying to target, and set the media query accordingly:
 
 ```javascript
+    import { ResponsiveComponent } from "react-responsive-component";
+
     <ResponsiveCompVC query={"only screen and (max-width: 480px)"}>
         <HamburgerBtn userId={userId} />
     </ResponsiveCompVC>
@@ -26,12 +28,14 @@ All you need to do is wrap your content (React Components or jsx or html...) for
     <ResponsiveCompVC query={"only screen and (min-width: 480px)"}>
         <ProfileDropDown userId={userId} />
     </ResponsiveCompVC>
-
-    <ResponsiveCompVC query={"tv"}>
-        <span>This feature is not supported on TVs yet :(</span>
-    </ResponsiveCompVC>
 ```
 
 #### Optional props
 
 You can pass a `tag` props to specify the tagname of the responsive component wrapper.
+
+```javascript
+    <ResponsiveCompVC query={"tv"} tag="ul">
+        <li>This feature is not supported on TVs yet :(</li>
+    </ResponsiveCompVC>
+```
