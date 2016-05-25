@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "react-responsive-component",
   "description": "A responsive React component that react media queries.",
   "main": "./lib/index.js",
