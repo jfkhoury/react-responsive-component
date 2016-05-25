@@ -1,7 +1,8 @@
 {
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "react-responsive-component",
   "description": "A responsive React component that react media queries.",
+  "keywords": ["react", "reactjs", "responsive"],
   "main": "./lib/index.js",
   "scripts": {
     "prepublish": "npm run lint && npm run build",
