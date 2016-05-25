@@ -4,15 +4,14 @@ A responsive React component that takes a media query, and renders its children 
 
 ## Implementation
 
-Uses `Window.matchmedia` api that takes a media query and returns a `MediaQueryList` object representing the parsed result. [read more](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
+Works natively with `Window.matchmedia` api that takes a media query and returns a `MediaQueryList` object representing the parsed result. [read more](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
 
-Feature      Chrome  Firefox (Gecko) Internet Explorer   Opera   Safari
-Basic support   9        6.0 (6.0)         10              12.1    5.1
+| Feature   |   Chrome | Firefox (Gecko) | Internet Explorer  | Opera  | Safari |
+|:----------:|:-------------:|:------:|:-------------:|:------:|:-------------:|
+| Basic support |  9    |    6.0 (6.0)     |    10       |       12.1  |  5.1 |
 
-For older browsers, It falls back to Paul Irish's implementation of `matchMedia` for older browsers. (Check out index.js)
+For older browsers, it falls back to Paul Irish's implementation of `matchMedia`.
 [Paul Irish's matchMedia](https://github.com/paulirish/matchMedia.js/)
-
-Should work on all browsers.
 
 ### How to use this awesome piece of code?
 
