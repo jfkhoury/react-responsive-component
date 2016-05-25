@@ -10,11 +10,13 @@ Feature      Chrome  Firefox (Gecko) Internet Explorer   Opera   Safari
 Basic support   9        6.0 (6.0)         10              12.1    5.1
 
 For older browsers, It falls back to Paul Irish's implementation of `matchMedia` for older browsers. (Check out index.js)
-[Paul Irish matchMedia:](https://github.com/paulirish/matchMedia.js/)
+[Paul Irish's matchMedia](https://github.com/paulirish/matchMedia.js/)
 
 Should work on all browsers.
 
 ### How to use this awesome piece of code?
+
+[Try it out on codepen](http://codepen.io/jfkhoury/pen/MegmwV)
 
 All you need to do is wrap your content (React Components or jsx or html...) for the specific screen/device you are trying to target, and set the media query accordingly:
 
