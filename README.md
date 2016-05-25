@@ -1,0 +1,37 @@
+# Responsive Component
+
+A responsive React component that takes a media query, and renders its children only if the query matches. Handles changes if you resize your browser or flip your device...
+
+## Implementation
+
+Uses `Window.matchmedia` api that takes a media query and returns a `MediaQueryList` object representing the parsed result. [read more](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
+
+Feature      Chrome  Firefox (Gecko) Internet Explorer   Opera   Safari
+Basic support   9        6.0 (6.0)         10              12.1    5.1
+
+For older browsers, It falls back to Paul Irish's implementation of `matchMedia` for older browsers. (Check out index.js)
+[Paul Irish matchMedia:](https://github.com/paulirish/matchMedia.js/)
+
+Should work on all browsers.
+
+### How to use this awesome piece of code?
+
+All you need to do is wrap your content (React Components or jsx or html...) for the specific screen/device you are trying to target, and set the media query accordingly:
+
+```javascript
+    <ResponsiveCompVC query={"only screen and (max-width: 480px)"}>
+        <HamburgerBtn userId={userId} />
+    </ResponsiveCompVC>
+
+    <ResponsiveCompVC query={"only screen and (min-width: 480px)"}>
+        <ProfileDropDown userId={userId} />
+    </ResponsiveCompVC>
+
+    <ResponsiveCompVC query={"tv"}>
+        <span>This feature is not supported on TVs yet :(</span>
+    </ResponsiveCompVC>
+```
+
+#### Optional props
+
+You can pass a `tag` props to specify the tagname of the responsive component wrapper.
