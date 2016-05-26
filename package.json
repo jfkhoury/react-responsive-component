@@ -1,7 +1,7 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "react-responsive-component",
-  "description": "A responsive React component that react media queries.",
+  "description": "A responsive React component that reacts to media queries.",
   "keywords": ["react", "reactjs", "responsive"],
   "main": "./lib/index.js",
   "scripts": {
