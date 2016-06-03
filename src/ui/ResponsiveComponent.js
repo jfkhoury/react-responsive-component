@@ -59,3 +59,7 @@ ResponsiveComponent.propTypes = {
     query: React.PropTypes.string.isRequired,
     tag: React.PropTypes.string
 };
+
+ResponsiveComponent.defaultProps = {
+    tag: "div"
+};
