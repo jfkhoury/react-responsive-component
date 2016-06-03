@@ -55,4 +55,7 @@ export default class ResponsiveComponent extends React.Component {
     }
 }
 
-ResponsiveComponent.propTypes = { query: React.PropTypes.string.isRequired };
+ResponsiveComponent.propTypes = {
+    query: React.PropTypes.string.isRequired,
+    tag: React.PropTypes.string
+};
