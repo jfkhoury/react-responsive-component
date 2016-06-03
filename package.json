@@ -10,6 +10,7 @@
     "lint": "eslint src"
   },
   "author": "Joe Khoury",
+  "contributors": "Donavon West <github@donavon.com> (http://donavon.com)",
   "dependencies": {
     "react": "^15.0.1",
     "matchmedia-polyfill": "^0.3.0"
