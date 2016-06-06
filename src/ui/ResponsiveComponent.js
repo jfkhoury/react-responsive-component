@@ -45,8 +45,8 @@ export default class ResponsiveComponent extends React.Component {
     }
 
     get _display() {
-        return React.createElement(this.props.tag || "div",
-                                   { className: "responsive-component"},
+        return React.createElement(this.props.tag,
+                                   { className: "responsive-component" },
                                    this.props.children);
     }
 
@@ -55,4 +55,11 @@ export default class ResponsiveComponent extends React.Component {
     }
 }
 
-ResponsiveComponent.propTypes = { query: React.PropTypes.string.isRequired };
+ResponsiveComponent.propTypes = {
+    query: React.PropTypes.string.isRequired,
+    tag: React.PropTypes.string
+};
+
+ResponsiveComponent.defaultProps = {
+    tag: "div"
+};
