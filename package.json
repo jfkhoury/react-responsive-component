@@ -1,8 +1,8 @@
 {
-  "version": "1.0.8",
-  "name": "react-responsive-component",
+  "version": "2.0.0-alpha.1",
+  "name": "react-responsive-render-if",
   "description": "A responsive React component that reacts to media queries.",
-  "keywords": ["react", "reactjs", "responsive"],
+  "keywords": ["react", "reactjs", "responsive", "react-component"],
   "main": "./lib/index.js",
   "scripts": {
     "prepublish": "npm run lint && npm run build",

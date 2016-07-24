@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class ResponsiveComponent extends React.Component {
+export default class ResponsiveRenderIf extends React.Component {
     constructor(props) {
         super(props);
         this.state = { canRender: false };
@@ -22,7 +22,7 @@ export default class ResponsiveComponent extends React.Component {
 
     _tryToRender(props = this.props) {
         if (!props.query) {
-            throw new Error("ResponsiveComponent: `query` is a required prop!");
+            throw new Error("ResponsiveRenderIf: `query` is a required prop!");
         }
 
         this._dispose();
@@ -44,22 +44,30 @@ export default class ResponsiveComponent extends React.Component {
         }
     }
 
-    get _display() {
-        return React.createElement(this.props.tag,
-                                   { className: "responsive-component" },
-                                   this.props.children);
+    _render() {
+        const { masqueradeAs, query, children, ...additionProps } = this.props;
+        const multipleChildren = children.length > 1;
+        const hasAdditionProps = Object.keys(additionProps).length;
+
+        if (multipleChildren || masqueradeAs || hasAdditionProps) {
+            const Component = masqueradeAs || "div";
+            return <Component {...additionProps}>{children}</Component>;
+        } else {
+            return this.props.children; // Render the single child without a wrapper.
+        }
     }
 
     render() {
-        return this.state.canRender ? this._display : null;
+        return this.state.canRender ? this._render() : null;
     }
 }
 
-ResponsiveComponent.propTypes = {
-    query: React.PropTypes.string.isRequired,
-    tag: React.PropTypes.string
-};
-
-ResponsiveComponent.defaultProps = {
-    tag: "div"
-};
+if (process.env.NODE_ENV !== "production") {
+    ResponsiveRenderIf.propTypes = {
+        query: React.PropTypes.string.isRequired,
+        masqueradeAs: React.PropTypes.oneOfType([
+            React.PropTypes.string,
+            React.PropTypes.element
+        ])
+    };
+}

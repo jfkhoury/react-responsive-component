@@ -1,5 +1,5 @@
 import "matchmedia-polyfill";
 import "matchmedia-polyfill/matchMedia.addListener";
-import ResponsiveComponent from "./ui/ResponsiveComponent";
+import ResponsiveRenderIf from "./ui/ResponsiveRenderIf";
 
-export { ResponsiveComponent };
+export default ResponsiveRenderIf;
