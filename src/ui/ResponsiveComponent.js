@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class ResponsiveComponent extends React.Component {
     constructor(props) {
@@ -56,8 +57,8 @@ export default class ResponsiveComponent extends React.Component {
 }
 
 ResponsiveComponent.propTypes = {
-    query: React.PropTypes.string.isRequired,
-    tag: React.PropTypes.string
+    query: PropTypes.string.isRequired,
+    tag: PropTypes.string
 };
 
 ResponsiveComponent.defaultProps = {
